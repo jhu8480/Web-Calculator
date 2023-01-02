@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #1D976C;
+  background: -webkit-linear-gradient(to right, #93F9B9, #1D976C);
+  background: linear-gradient(to right, #93F9B9, #1D976C);
+}
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 70px);
+  grid-template-rows: minmax(100px, auto) repeat(5, 70px);
+}
+
+.output-screen {
+  grid-column: 1/ -1;
+  background-color: rgba(24, 24, 24, 0.8);
+  color: #efefef;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 12px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output-screen .previous-operand {
+  color: rgba(255, 255, 255, 0.60);
+  font-size: 1.1rem;
+}
+
+.output-screen .current-operand {
+  color: rgba(255, 255, 255, 0.90);
+  font-size: 1.8rem;
+}
+
+.calculator-grid button {
+  cursor: pointer;
+  font-size: 1.5rem;
+  border: 0.5px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.55);
+  color: rgb(51, 49, 49);
+}
+
+.calculator-grid button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
